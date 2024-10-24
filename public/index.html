@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Chat Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Login Modal -->
+        <div id="login-modal" class="login-modal">
+            <div class="login-content">
+                <h2>Welcome to ChatHub</h2>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" placeholder="Your Username" required>
+                </div>
+                <button id="login-btn" class="primary-btn">Enter ChatHub</button>
+            </div>
+        </div>
+
+        <!-- Main Chat Interface -->
+        <div id="chat-interface" class="chat-interface hidden">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <h3>ChatHub</h3>
+                    <span id="user-profile"></span>
+                </div>
+                
+                <!-- Create New Chat -->
+                <div class="create-chat">
+                    <div class="input-group">
+                        <input type="text" id="new-chat-input" placeholder="Enter chat name">
+                        <button id="create-chat-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chat List -->
+                <div class="chat-list" id="chat-list">
+                    <!-- Chat items will be added here dynamically -->
+                </div>
+            </div>
+
+            <!-- Main Chat Area -->
+            <div class="main-chat">
+                <div class="chat-header">
+                    <h2 id="current-chat-name">Select a chat</h2>
+                    <div class="chat-actions">
+                        <span id="online-users">0 online</span>
+                        <button id="leave-chat" class="secondary-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="messages-container" id="messages-container">
+                    <!-- Messages will be added here dynamically -->
+                </div>
+
+                <div class="message-input">
+                    <div class="input-group">
+                        <input type="text" id="message-input" placeholder="Type your message...">
+                        <button id="send-message-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

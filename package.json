@@ -1,0 +1,16 @@
+{
+  "name": "schoolchat-project",
+  "version": "1.0.0",
+  "description": "Chat Service, Unblocked for School",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Sphinx",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "socket.io": "^4.8.0"
+  }
+}
